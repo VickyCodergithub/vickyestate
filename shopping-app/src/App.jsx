@@ -6,7 +6,7 @@ import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Header from './components/Header';
-import UserList from './pages/userList';
+import UserList from './pages/UserList';
 import PrivateProfile from './components/PrivateProfile';
 import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/Update-Listing';
