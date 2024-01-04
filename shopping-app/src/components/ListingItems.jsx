@@ -3,13 +3,13 @@ import { Link } from "react-router-dom"
 
 export default function ListingItems ({listing}) {
   return (
-      <div className="bg-white shadow-md sm:w-[330px]
-      transition-shadow hover:shadow-lg w-full
+      <div className="bg-white shadow-md w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 px-2 py-2
+      transition-shadow hover:shadow-lg 
       overflow-hidden rounded-lg"
       >
-          <Link className='w-500px' to={`/listing/${listing._id}`}>
+          <Link className='block'  to={`/listing/${listing._id}`}>
                 <img src={listing.imageUrls[0]}
-                  className="h-[500px] w-full sm:h-[300px] 
+                  className="w-full h-auto
                   object-cover hover:scale-105 
                   transition-scale duration-300 "
                   alt={listing.name}
