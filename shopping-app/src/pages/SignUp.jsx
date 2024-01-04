@@ -52,7 +52,7 @@ const SignUp = () => {
       <input type='text' placeholder='input username' onChange={handleChange} className='rounded-lg border p-2  ' id='username' />
       <input type='text' placeholder='input your email address' onChange={handleChange} className='rounded-lg border p-2' id='email' />
       <input type='text' placeholder='input password' onChange={handleChange} className='rounded-lg border p-2 ' id='password' />
-      <button disabled={loading} className='bg-green-600 rounded-lg disabled:opacity-80 hover:opacity-88 uppercase hover:opacity-90 font-semibold p-1 text-white '>{loading ? 'Loading...' : 'Sign up'}</button>
+      <button disabled={loading} className='bg-green-600 rounded-lg disabled:opacity-80 hover:opacity-88 uppercase hover:opacity-90 font-semibold p-2 text-white '>{loading ? 'Loading...' : 'Sign up'}</button>
     <OAuth/>
       </form>
     <div className='mt-3 flex gap-3'>
