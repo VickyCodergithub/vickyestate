@@ -101,7 +101,7 @@ export default function SearchList() {
       const searchQuery = urlParams.toString();
       const response = await fetch(`/api/listing/get?${searchQuery}`);
       const data = await response.json();
-      if (data.length > 5) {
+      if (data.length > 20) {
         setShowmore(true);
       } else {
         setShowmore(false);
@@ -138,13 +138,13 @@ export default function SearchList() {
     const searchQuery = urlParams.toString();
     const res = await fetch(`/api/listing/get?${searchQuery}`);
     const data = await res.json();
-    if (data.length < 6) {
+    if (data.length < 20) {
       setShowmore(false);
     }
     setListings([...listings, ...data]);
   }
   const onClickShowLess = () => {
-    const initListings = listings.slice(0, 5);
+    const initListings = listings.slice(0, 20);
     setListings(initListings);
     setShowmore(true);
   }
@@ -163,7 +163,7 @@ export default function SearchList() {
               type='text' placeholder='Search...' />
           </div>
           <div className='flex gap-2 flex-wrap items-center'>
-            <label className='font-semibold'>Type:</label>
+            <label className='font-semibold items-center'>Type:</label>
             <div className='flex gap-2 items-center'>
               <input id='all' className='w-5 items-center'
                 onChange={handleChange}
@@ -259,14 +259,14 @@ export default function SearchList() {
             ))
           }
           {
-           showmore &&(
+           showmore && listings.length < 20 && (
               <FaArrowDown onClick={onClickShowMore}
                 className='text-green-500 text-xl
                items-center w-full'/>
             )
           }
           {
-           !showmore && listings.length > 5 && (
+           !showmore && listings.length > 19 && (
               <FaArrowUp className='text-green-600
               text-xl items-center w-full'
               onClick={onClickShowLess}

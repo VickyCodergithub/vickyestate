@@ -113,7 +113,7 @@ const Home = () => {
         
         
       </div>
-      <div className='max-w-6xl mx-auto p-2
+      <div className='max-w-6xl mx-auto p-5
       flex flex-col gap-6 my-20'>
         {
           offerListing && offerListing.length > 0 && (

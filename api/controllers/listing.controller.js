@@ -62,7 +62,7 @@ export const getList = async (req, res, next) => {
 
 export const getLists = async (req, res, next) => {
     try {
-        const limit = parseInt(req.query.limit) || 6;
+        const limit = parseInt(req.query.limit) || 20;
         const startIndex = parseInt(req.query.startIndex) || 0;
         let offer = req.query.offer;
 
