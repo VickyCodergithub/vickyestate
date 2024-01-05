@@ -164,32 +164,32 @@ export default function SearchList() {
           </div>
           <div className='flex gap-2 flex-wrap items-center'>
             <label className='font-semibold'>Type:</label>
-            <div className='flex gap-2'>
-              <input id='all' className='w-5'
+            <div className='flex gap-2 items-center'>
+              <input id='all' className='w-5 items-center'
                 onChange={handleChange}
                 checked={searchbardata.type === 'all'}
                 type='checkbox'
               />
               <span>Rent & Sale</span>
             </div>
-             <div className='flex gap-2'>
-              <input id='rent' className='w-5'
+             <div className='flex gap-2 items-center'>
+              <input id='rent' className='w-5 items-center'
                 type='checkbox'
                 onChange={handleChange}
                 checked={searchbardata.type ==='rent'}
               />
               <span>Rent</span>
             </div>
-             <div className='flex gap-2'>
-              <input id='sale' className='w-5'
+             <div className='flex gap-2 items-center'>
+              <input id='sale' className='w-5 items-center'
                 type='checkbox'
                 onChange={handleChange}
                 checked={searchbardata.type ==='sale'}
               />
               <span>Sale</span>
             </div>
-             <div className='flex gap-2'>
-              <input id='offer' className='w-5'
+             <div className='flex gap-2 items-center'>
+              <input id='offer' className='w-5 items-center'
                 type='checkbox'
                 onChange={handleChange}
                 checked={searchbardata.offer}
@@ -199,16 +199,16 @@ export default function SearchList() {
           </div>
           <div className='flex gap-2 flex-wrap items-center'>
             <label className='font-semibold'>Features:</label>
-            <div className='flex gap-2'>
-              <input id='parking' className='w-5'
+            <div className='flex gap-2 items-center'>
+              <input id='parking' className='w-5 items-center'
                 type='checkbox'
                 onChange={handleChange}
                 checked={searchbardata.parking}
               />
               <span>Parking</span>
             </div>
-             <div className='flex gap-2'>
-              <input id='furnished' className='w-5'
+             <div className='flex gap-2 items-center'>
+              <input id='furnished' className='w-5 items-center'
                 type='checkbox'
                 onChange={handleChange}
                 checked={searchbardata.furnished}
