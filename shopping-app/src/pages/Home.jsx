@@ -51,50 +51,53 @@ const Home = () => {
       fetchOfferListing();
     }, []);
   return (
-    <div >
+    <div
+      style={{backgroundImage:'url(https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg)', backgroundSize:'cover'}}
+      className="w-full h-screen bg-no-repeat bg-cover backdrop-brightness-[0.0]"
+    >
       
       <div className='flex flex-col p-20 px-5
       mx-auto gap-4'>
         <p className=' italic font-semibold
-        text-green-800 flex flex-row
+        text-white flex flex-row
         items-center gap-1'>
           Welcome to VickyEstate Agency
-        <FaHome className='items-center text-green-500 '/>
+        <FaHome className='items-center text-white '/>
         </p>
-        <h1 className='text-3xl text-slate-800
+        <h1 className='text-3xl text-white
         font-bold sm:text-6xl '>
           Find your next desired 
           <br/>
           dream Home with ease
         </h1>
-        <div className='text-slate-600 text-md
+        <div className='text-white text-md
         sm:text-sm italic'>
-          <b className='text-orange-800'>VickyEstate</b> is the best place to find your
+          <b className='text-red-700 font-extrabold'>VickyEstate</b> is the best place to find your
           dream home, easy and comfortable...
           <br />
           Our services also include varieties of properties 
           that suites your choice..
           <br/>
           What are you waiting for?
-          <Link to={'/search'} className='text-blue-600 hover:underline'
+          <Link to={'/search'} className='text-yellow-300 hover:underline'
           >
             Let's get started
           </Link> 
         </div>
         <Link to={'/search'}>
           <button className='border p-3
-          bg-blue-600 text-white uppercase
+          bg-red-600 text-white uppercase
           hover:opacity-90 rounded-lg font-semibold
           sm:text-sm'>Get Started</button>
         </Link>
       </div>
       <div>
         
-          <Swiper navigation>
+          <Swiper navigation >
           {
             offerListing && offerListing.length > 0 &&
             offerListing.map((listing) => (
-              <SwiperSlide >
+              <SwiperSlide>
                 <Link to={`/listing/${listing._id}`}>
           
                 <div style={{
