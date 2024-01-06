@@ -51,13 +51,13 @@ const Home = () => {
       fetchOfferListing();
     }, []);
   return (
-    <div
-      style={{backgroundImage:'url(https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg)', backgroundSize:'cover'}}
-      className="w-full h-screen bg-no-repeat bg-cover backdrop-brightness-[0.0]"
+    <div className="gap-4" 
     >
       
-      <div className='flex flex-col p-20 px-5
-      mx-auto gap-4'>
+      <div style={{backgroundImage:'url(https://cdn.pixabay.com/photo/2012/03/04/00/43/architecture-22039_1280.jpg)', backgroundSize:'cover'}}
+      className="flex flex-col p-20 px-5
+      mx-auto gap-4 w-full bg-no-repeat bg-cover backdrop-brightness-[0.0] mb-10"
+        >
         <p className=' italic font-semibold
         text-white flex flex-row
         items-center gap-1'>
